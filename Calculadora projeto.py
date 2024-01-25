@@ -9,7 +9,7 @@ def realizar_operacao(numero1, numero2, operacao):
         resultado = numero1 * numero2
         print("A multiplicação de {} por {} é igual a: {}".format(numero1, numero2, resultado))
     elif operacao == '4':
-        if numero2 != 0:
+        if numero2 or numero1 != 0:
             resultado = numero1 / numero2
             print("A divisão de {} por {} é igual a: {}".format(numero1, numero2, resultado))
         else:
@@ -38,7 +38,7 @@ def calculadora():
 
         try:
             numero1 = float(input("Digite o Primeiro Numero: "))
-            numero2 = float(inpu3t("Digite o Segundo Numero: "))
+            numero2 = float(input("Digite o Segundo Numero: "))
         except:
             print("Erro: Insira valores numéricos válidos.")
             continue
