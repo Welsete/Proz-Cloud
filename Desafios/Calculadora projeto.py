@@ -15,39 +15,37 @@ def realizar_operacao(numero1, numero2, operacao):
         else:
             print("Erro: Divisão por zero!")
 
-def calculadora():
-    while True:
-        print("Calculadora")
-        print("Bem vindo a Calculadora")
-        print("Opções:")
-        print("1. Soma")
-        print("2. Subtração")
-        print("3. Multiplicação")
-        print("4. Divisão")
-        print("0. Sair")
+while True:
+    print("Calculadora")
+    print("Bem vindo a Calculadora")
+    print("Opções:")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    print("0. Sair")
 
-        operacao = input("Digite o número para a operação correspondente: ")
+    operacao = input("Digite o número para a operação correspondente: ")
 
-        if operacao == '0':
-            print("Encerrando a calculadora. Até mais!")
-            break
+    if operacao == '0':
+        print("Encerrando a calculadora. Até mais!")
+        break
 
-        if operacao not in ['1', '2', '3', '4']:
-            print("Essa opção não existe. Tente novamente.")
-            continue
+    if operacao not in ['1', '2', '3', '4']:
+        print("Essa opção não existe. Tente novamente.")
+        continue
 
-        try:
-            numero1 = float(input("Digite o Primeiro Numero: "))
-            numero2 = float(input("Digite o Segundo Numero: "))
-        except:
-            print("Erro: Insira valores numéricos válidos.")
-            continue
+    try:
+        numero1 = float(input("Digite o Primeiro Numero: "))
+        numero2 = float(input("Digite o Segundo Numero: "))
+    except:
+        print("Erro: Insira valores numéricos válidos.")
+        continue
 
-        realizar_operacao(numero1, numero2, operacao)
+    realizar_operacao(numero1, numero2, operacao)
 
-        continuar = input("Deseja realizar outra operação? (S para Sim, qualquer outra tecla para sair): ")
-        if continuar.upper() != 'S':
-            print("Encerrando a calculadora. Até mais!")
-            break
+    continuar = input("Deseja realizar outra operação? (S para Sim, qualquer outra tecla para sair): ")
+    if continuar.upper() != 'S':
+        print("Encerrando a calculadora. Até mais!")
+    break
 
-calculadora()
