@@ -4,9 +4,9 @@ resperrado = 0
 def conferir():
     while True:
         conferencia = input(f"Deseja continuar? [S][N]")
-        if conferencia == "N":
+        if conferencia.upper() == "N":
             exit()
-        elif conferencia == "S":
+        elif conferencia.upper() == "S":
             break
 
 def perguntas():
@@ -66,8 +66,11 @@ def perguntas():
                 print("Errado!")
                 resperrado += 1
                 conferir()
+        except KeyboardInterrupt:
+            print("Siga as intruções:")
+            perguntas()
         except ValueError:
-            print("Siga as intruções")
+            print("Siga as instruções:")
             perguntas()
         break
 
