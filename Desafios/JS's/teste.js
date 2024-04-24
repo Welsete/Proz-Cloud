@@ -1,6 +1,6 @@
-
-if(true) {
-    var a = 10;
-
+for (let i = 0; i < 10; i++) {
+  console.log(i);
 }
-console.log
+let letras = ["a", "b", "c"];
+
+console.log(letras.length);
